@@ -31,14 +31,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0px;
+}
+
+@media (max-width: 600px) {
+    #introduction {
+        display: block;
+    }
 }
 
 #description {
-    margin: 20px;
+    margin: 30px;
 }
 
 #skills {
-    margin: 20px;
+    margin: 30px;
 }
 
 #description h3, #skills h3 {
@@ -61,10 +68,17 @@ body {
     grid-gap: 10px;
 }
 
+@media (max-width: 600px) {
+    #projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .project-element {
+    border-radius: 5px;
     background-color: #e8e8c8;
     color: #444c59;
-    padding: 50px;
+    padding: 80px;
 }
 
 /* footer */
