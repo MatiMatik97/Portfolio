@@ -49,12 +49,9 @@ body {
 
 #projects {
     background-color: #3669cf;
-}
-
-.project-element {
-    background-color: #e8e8c8;
-    color: #444c59;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #projects-grid {
@@ -62,6 +59,12 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+}
+
+.project-element {
+    background-color: #e8e8c8;
+    color: #444c59;
+    padding: 50px;
 }
 
 /* footer */
