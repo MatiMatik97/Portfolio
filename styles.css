@@ -1,0 +1,72 @@
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    letter-spacing: 1px;
+}
+
+#header, #footer, #introduction, #projects {
+    width: 100%;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+/* header */
+
+#header {
+    background-color: #444c59;
+    font-size: 1.5em;
+    padding: 20px 0px;
+}
+
+/* introduction */
+
+#introduction {
+    background-color: #254a94;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#description {
+    margin: 20px;
+}
+
+#skills {
+    margin: 20px;
+}
+
+#description h3, #skills h3 {
+    font-size: 150%;
+}
+
+/* projects */
+
+#projects {
+    background-color: #3669cf;
+}
+
+.project-element {
+    background-color: #e8e8c8;
+    color: #444c59;
+    padding: 20px;
+}
+
+#projects-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+/* footer */
+
+#footer {
+    background-color: #444c59;
+    padding: 20px 0px;
+}
