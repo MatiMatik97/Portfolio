@@ -29,23 +29,15 @@ body {
 #introduction {
     background-color: #254a94;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     padding: 20px 0px;
 }
 
-@media (max-width: 600px) {
-    #introduction {
-        display: block;
-    }
-}
-
-#description {
+#description, #skills {
     margin: 30px;
-}
-
-#skills {
-    margin: 30px;
+    max-width: 500px;
 }
 
 #description h3, #skills h3 {
@@ -62,23 +54,41 @@ body {
 }
 
 #projects-grid {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-}
-
-@media (max-width: 600px) {
-    #projects-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-element {
-    border-radius: 5px;
-    background-color: #e8e8c8;
+    border-radius: 15px;
     color: #444c59;
     padding: 80px;
+    margin: 20px;
+    min-width: 25%;
+}
+
+#project1 {
+    background-image: url('img/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#project1:hover, #project1:focus {
+    cursor: pointer;
+    opacity: 85%;
+}
+
+#button1 {
+    padding: 10% 20%;
+    background-color: #2b68cc;
+    border: 2px solid #1d58b8;
+    border-radius: 15px;
+    outline: none;
+}
+
+#button1:hover, #button1:focus {
+    cursor: pointer;
 }
 
 /* footer */
