@@ -66,20 +66,33 @@ body {
     padding: 80px;
     margin: 20px;
     min-width: 25%;
-}
-
-#project1 {
-    background-image: url('img/img1.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    transition: 0.3s;
 }
 
-#project1:hover, #project1:focus {
+.project-element:hover, .project-element:focus {
     cursor: pointer;
     opacity: 85%;
 }
 
-#button1 {
+#project1 {
+    background-image: url('img/img1.jpg');
+}
+
+#project2 {
+    background-image: url('img/img1.jpg');
+}
+
+#project3 {
+    background-image: url('img/img1.jpg');
+}
+
+#project4 {
+    background-image: url('img/img1.jpg');
+}
+
+button {
     padding: 10% 20%;
     background-color: #2b68cc;
     border: 2px solid #1d58b8;
@@ -87,7 +100,7 @@ body {
     outline: none;
 }
 
-#button1:hover, #button1:focus {
+button:hover, button:focus {
     cursor: pointer;
 }
 
@@ -96,4 +109,39 @@ body {
 #footer {
     background-color: #444c59;
     padding: 20px 0px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon {
+    font-size: 300%;
+    margin: 5px 10px;
+    transition: 0.3s;
+}
+
+.icon:hover, .icon:focus {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.fa-envelope {
+    color: #D44638;
+}
+
+.fa-facebook {
+    color: #335db8;
+}
+
+.fa-linkedin {
+    color: #0e76a8;
+}
+
+.fa-github {
+    color: #6cc644;
 }
