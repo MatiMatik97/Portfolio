@@ -33,6 +33,39 @@ body {
     margin-left: -5px;
 }
 
+.photo {
+    width: 104px;
+    height: 135px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -100px;
+    -webkit-box-shadow: 5px -5px 15px 0px #272727;
+    -moz-box-shadow: 5px -5px 15px 0px #272727;
+    box-shadow: 5px -5px 15px 0px #272727;
+    /* background-image: url('img/photo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+@media (max-width: 440px) {
+    .photo {
+        width: 74px;
+        height: 95px;
+        margin-top: -70px;
+    }
+}
+
+@media (min-width: 640px) {
+    .photo {
+        margin-left: 50px;
+    }
+}
+
 /* introduction */
 
 .introduction {
@@ -93,15 +126,15 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transition: 0.3s;
-    -webkit-box-shadow: 0px 0px 15px -2px rgba(68, 76, 89, 1);
-    -moz-box-shadow: 0px 0px 15px -2px rgba(68, 76, 89, 1);
-    box-shadow: 0px 0px 15px -2px rgba(68, 76, 89, 1);
+    -webkit-box-shadow: 0px 0px 15px -2px #444c59;
+    -moz-box-shadow: 0px 0px 15px -2px #444c59;
+    box-shadow: 0px 0px 15px -2px;
 }
 
 .project-description {
     font-style: italic;
     text-shadow: 0px 0px 2px #444c59;
-    background: rgba(207, 164, 23, 0.3);
+    background: rgba(207, 164, 23, 0.7);
     border-radius: 30%;
     margin-top: 5px;
     color: #f0f0f0;
