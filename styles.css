@@ -30,6 +30,7 @@ body {
     height: 73px;
     background-position: bottom left;
     background-size: cover;
+    margin-left: -5px;
 }
 
 /* introduction */
@@ -41,6 +42,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px 0px;
+    margin-top: -1px;
+    margin-bottom: -1px;
 }
 
 .description, .skills {
@@ -58,6 +61,7 @@ body {
     height: 73px;
     background-position: bottom left;
     background-size: cover;
+    margin-left: -5px;
 }
 
 /* projects */
@@ -65,6 +69,8 @@ body {
 .projects {
     padding-top: 20px;
     background-color: #3669cf;
+    margin-top: -1px;
+    margin-bottom: -1px;
 }
 
 .projects-grid {
@@ -75,22 +81,31 @@ body {
 }
 
 .project-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 325px;
+    height: 175px;
     border-radius: 15px;
     color: #444c59;
-    padding: 80px;
+    padding: 30px;
     margin: 20px;
-    min-width: 25%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transition: 0.3s;
+    -webkit-box-shadow: 0px 0px 15px -2px rgba(68, 76, 89, 1);
+    -moz-box-shadow: 0px 0px 15px -2px rgba(68, 76, 89, 1);
+    box-shadow: 0px 0px 15px -2px rgba(68, 76, 89, 1);
 }
 
 .project-description {
-    text-shadow: 0px 0px 2px black;
-    background: rgba(43, 104, 202, 0.5);
+    font-style: italic;
+    text-shadow: 0px 0px 2px #444c59;
+    background: rgba(207, 164, 23, 0.3);
     border-radius: 30%;
-    color: red;
     margin-top: 5px;
+    color: #f0f0f0;
+    padding: 10px;
 }
 
 .project-element:hover, .project-element:focus {
@@ -103,27 +118,15 @@ body {
 }
 
 .project2 {
-    background-image: url('img/img1.jpg');
+    background-image: url('img/img2.jpg');
 }
 
 .project3 {
-    background-image: url('img/img1.jpg');
+    background-image: url('img/img3.jpg');
 }
 
 .project4 {
-    background-image: url('img/img1.jpg');
-}
-
-.button {
-    padding: 10% 20%;
-    background-color: #2b68cc;
-    border: 2px solid #1d58b8;
-    border-radius: 15px;
-    outline: none;
-}
-
-.button:hover, .button:focus {
-    cursor: pointer;
+    background-image: url('img/img4.jpg');
 }
 
 .third-divider {
@@ -132,6 +135,7 @@ body {
     height: 73px;
     background-position: bottom left;
     background-size: cover;
+    margin-left: -5px;
 }
 
 /* footer */
@@ -139,6 +143,7 @@ body {
 .footer {
     background-color: #444c59;
     padding: 20px 0px;
+    margin-top: -1px;
 }
 
 .contact {
