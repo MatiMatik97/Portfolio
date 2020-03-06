@@ -1,0 +1,214 @@
+/* general */
+
+/* Montserrat google font */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    letter-spacing: 1px;
+}
+
+.header, .footer, .introduction, .projects {
+    width: 100%;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+/* header */
+
+.header {
+    background-color: #444c59;
+    font-size: 1.5em;
+    padding: 20px 0px;
+}
+
+.first-divider {
+    background-color: #254a94;
+    background-image: url('img/firstCurve.svg');
+    height: 73px;
+    background-position: bottom left;
+    background-size: cover;
+    margin-left: -5px;
+}
+
+.photo {
+    width: 104px;
+    height: 135px;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -100px;
+    -webkit-box-shadow: 5px -5px 15px 0px #272727;
+    -moz-box-shadow: 5px -5px 15px 0px #272727;
+    box-shadow: 5px -5px 15px 0px #272727;
+    /* background-image: url('img/photo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
+    background-color: darkslateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+@media (max-width: 440px) {
+    .photo {
+        width: 74px;
+        height: 95px;
+        margin-top: -70px;
+    }
+}
+
+@media (min-width: 640px) {
+    .photo {
+        margin-left: 50px;
+    }
+}
+
+/* introduction */
+
+.introduction {
+    background-color: #254a94;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.description, .skills {
+    margin: 30px;
+    max-width: 500px;
+}
+
+.description h3, .skills h3 {
+    font-size: 150%;
+}
+
+.second-divider {
+    background-color: #3669cf;
+    background-image: url('img/secondCurve.svg');
+    height: 73px;
+    background-position: bottom left;
+    background-size: cover;
+    margin-left: -5px;
+}
+
+/* projects */
+
+.projects {
+    padding-top: 20px;
+    background-color: #3669cf;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 325px;
+    height: 175px;
+    border-radius: 15px;
+    color: #444c59;
+    padding: 30px;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 0px 15px -2px #444c59;
+    -moz-box-shadow: 0px 0px 15px -2px #444c59;
+    box-shadow: 0px 0px 15px -2px;
+}
+
+.project-description {
+    font-style: italic;
+    text-shadow: 0px 0px 2px #444c59;
+    background: rgba(207, 164, 23, 0.7);
+    border-radius: 30%;
+    margin-top: 5px;
+    color: #f0f0f0;
+    padding: 10px;
+}
+
+.project-element:hover, .project-element:focus {
+    cursor: pointer;
+    opacity: 85%;
+}
+
+.project1 {
+    background-image: url('img/img1.jpg');
+}
+
+.project2 {
+    background-image: url('img/img2.jpg');
+}
+
+.third-divider {
+    background-color: #444c59;
+    background-image: url('img/thirdCurve.svg');
+    height: 73px;
+    background-position: bottom left;
+    background-size: cover;
+    margin-left: -5px;
+}
+
+/* footer */
+
+.footer {
+    background-color: #444c59;
+    padding: 20px 0px;
+    margin-top: -1px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px 10px;
+    transition: 0.3s;
+}
+
+.icon:hover, .icon:focus {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+#fa-envelope {
+    fill: #D44638;
+}
+
+.fa-facebook {
+    fill: #335db8;
+}
+
+.fa-linkedin {
+    fill: #0e76a8;
+}
+
+.fa-github {
+    fill: #6cc644;
+}
