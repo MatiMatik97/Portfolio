@@ -17,3 +17,38 @@ body {
     /* temporary */
     background-color: lightgray;
 }
+
+.navbar {
+    height: 100vh;
+    position: fixed;
+    background-color: #242424;
+    width: 6rem;
+    padding: 20px 0px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+li {
+    height: 6rem;
+    width: 100%;
+    background-color: rgb(89, 167, 154);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li:last-child {
+    margin-top: auto;
+}
+
+.main {
+    margin-left: 6rem;
+    text-align: justify;
+    padding: 5px;
+}
