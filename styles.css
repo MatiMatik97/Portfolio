@@ -1,6 +1,12 @@
 /* general */
 
-* {
+/* Montserrat google font */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -154,14 +160,6 @@ body {
     background-image: url('img/img2.jpg');
 }
 
-.project3 {
-    background-image: url('img/img3.jpg');
-}
-
-.project4 {
-    background-image: url('img/img4.jpg');
-}
-
 .third-divider {
     background-color: #444c59;
     background-image: url('img/thirdCurve.svg');
@@ -188,7 +186,8 @@ body {
 }
 
 .icon {
-    font-size: 300%;
+    width: 40px;
+    height: 40px;
     margin: 5px 10px;
     transition: 0.3s;
 }
@@ -198,18 +197,18 @@ body {
     opacity: 70%;
 }
 
-.fa-envelope {
-    color: #D44638;
+#fa-envelope {
+    fill: #D44638;
 }
 
 .fa-facebook {
-    color: #335db8;
+    fill: #335db8;
 }
 
 .fa-linkedin {
-    color: #0e76a8;
+    fill: #0e76a8;
 }
 
 .fa-github {
-    color: #6cc644;
+    fill: #6cc644;
 }
