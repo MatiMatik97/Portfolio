@@ -13,20 +13,22 @@
 
 body {
     font-family: "Montserrat", serif;
-    letter-spacing: 1px;
     /* temporary */
     background-color: lightgray;
 }
 
+/* navbar */
+
 .navbar {
-    height: 100vh;
+    top: 0;
     position: fixed;
-    background-color: #242424;
-    width: 6rem;
-    padding: 20px 0px;
+    background-color: #444444;
+    transition: width 0.5s ease;
+    overflow: hidden;
 }
 
-ul {
+.navbar-list {
+    padding: 20px 0px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -34,21 +36,99 @@ ul {
     height: 100%;
 }
 
-li {
-    height: 6rem;
+.list-item {
     width: 100%;
-    background-color: rgb(89, 167, 154);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #444444;
+    transition: background-color 1s ease;
 }
 
-li:last-child {
+.list-item:last-child {
     margin-top: auto;
 }
 
-.main {
-    margin-left: 6rem;
+.item-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    color: #c0c0c0;
+    fill: rgb(53, 13, 68);
+    transition: filter 0.5s ease;
+}
+
+.list-item:hover {
+    background-color: #494949;
+}
+
+.list-item:hover a {
+    filter: brightness(150%);
+}
+
+@media (min-width:600px) {
+    .navbar {
+        height: 100vh;
+        width: 5rem;
+    }
+    .navbar-list {
+        padding: 20px 0px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .item-link {
+        align-items: center;
+    }
+    .link-text {
+        display: block;
+    }
+    .navbar:hover {
+        width: 10rem;
+    }
+    .app-main {
+        margin-left: 5rem;
+        margin-top: 0;
+    }
+    .item-link svg {
+        min-width: 2rem;
+        margin: 0 1.5rem;
+    }
+}
+
+@media (max-width:600px) {
+    .navbar {
+        height: 5rem;
+        width: 100vw;
+    }
+    .navbar-list {
+        padding: 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+    }
+    .item-link {
+        justify-content: center;
+    }
+    .link-text {
+        display: none;
+    }
+    .app-main {
+        margin-left: 0;
+        margin-top: 5rem;
+    }
+    .item-link svg {
+        min-width: 1.5rem;
+        margin: 0 0.5rem;
+    }
+}
+
+/* app main section */
+
+.app-main {
+    background-color: gray;
     text-align: justify;
-    padding: 5px;
+    padding: 5px 20px;
 }
