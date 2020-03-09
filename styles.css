@@ -43,7 +43,7 @@ body {
 .list-item {
     width: 100%;
     background-color: #444444;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .list-item:last-child {
@@ -74,14 +74,6 @@ body {
         width: 5rem;
         animation: navbar-load 0.5s ease-in;
     }
-    .navbar-list {
-        padding: 20px 0px;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-    }
     @keyframes navbar-load {
         0% {
             left: -5rem;
@@ -90,11 +82,23 @@ body {
             left: 0;
         }
     }
+    .navbar-list {
+        padding: 20px 0px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+    }
+    .list-item:hover .link-text {
+        margin-left: 5px;
+    }
     .item-link {
         align-items: center;
     }
     .link-text {
         display: block;
+        transition: margin 0.5s ease-in-out;
     }
     .navbar:hover {
         width: 10rem;
