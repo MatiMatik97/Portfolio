@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", serif;
     /* temporary */
@@ -39,7 +43,7 @@ body {
 .list-item {
     width: 100%;
     background-color: #444444;
-    transition: background-color 1s ease;
+    transition: background-color 0.5s ease;
 }
 
 .list-item:last-child {
@@ -68,6 +72,7 @@ body {
     .navbar {
         height: 100vh;
         width: 5rem;
+        animation: navbar-load 0.5s ease-in;
     }
     .navbar-list {
         padding: 20px 0px;
@@ -76,6 +81,14 @@ body {
         align-items: center;
         flex-direction: column;
         height: 100%;
+    }
+    @keyframes navbar-load {
+        0% {
+            left: -5rem;
+        }
+        100% {
+            left: 0;
+        }
     }
     .item-link {
         align-items: center;
@@ -86,13 +99,13 @@ body {
     .navbar:hover {
         width: 10rem;
     }
-    .app-main {
-        margin-left: 5rem;
-        margin-top: 0;
-    }
     .item-link svg {
         min-width: 2rem;
         margin: 0 1.5rem;
+    }
+    .app-main {
+        margin-left: 5rem;
+        margin-top: 0;
     }
 }
 
@@ -100,6 +113,15 @@ body {
     .navbar {
         height: 5rem;
         width: 100vw;
+        animation: navbar-load 0.5s ease-in;
+    }
+    @keyframes navbar-load {
+        0% {
+            top: -5rem;
+        }
+        100% {
+            top: 0;
+        }
     }
     .navbar-list {
         padding: 0px;
@@ -115,13 +137,13 @@ body {
     .link-text {
         display: none;
     }
-    .app-main {
-        margin-left: 0;
-        margin-top: 5rem;
-    }
     .item-link svg {
         min-width: 1.5rem;
         margin: 0 0.5rem;
+    }
+    .app-main {
+        margin-left: 0;
+        margin-top: 5rem;
     }
 }
 
@@ -131,4 +153,42 @@ body {
     background-color: gray;
     text-align: justify;
     padding: 5px 20px;
+    animation: app-main-load 0.5s ease-in;
+}
+
+@keyframes app-main-load {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/* button to top href */
+
+.to-top-button {
+    background-color: #494625;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    animation: to-top-button-load 0.5s ease-in;
+}
+
+@keyframes to-top-button-load {
+    0% {
+        bottom: -50px;
+    }
+    100% {
+        bottom: 20px;
+    }
+}
+
+.to-top-button svg {
+    margin: -10px;
+    fill: #978b19;
+    width: 3rem;
+    height: 3rem;
 }
