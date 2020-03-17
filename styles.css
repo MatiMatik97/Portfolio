@@ -24,6 +24,7 @@ body {
 :root {
     --navbar-primary: #071e3d;
     --navbar-secondary: #be9d40;
+    --navbar-text: #c0c0c0;
 }
 
 /* scrollbar */
@@ -34,12 +35,16 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     background-color: var(--navbar-primary);
+    /* background-color: #071e3d; */
 }
 
 body::-webkit-scrollbar-thumb {
     background-color: var(--navbar-secondary);
     outline: 0.5rem solid var(--navbar-secondary);
     box-shadow: inset 0 0 3px var(--navbar-primary);
+    /* background-color: #be9d40;
+    outline: 0.5rem solid #be9d40;
+    box-shadow: inset 0 0 3px #071e3d; */
     border-radius: 15px;
 }
 
@@ -48,10 +53,10 @@ body::-webkit-scrollbar-thumb {
 .navbar {
     top: 0;
     position: fixed;
-    background-color: var(--navbar-primary);
-    transition: width 0.5s ease;
     overflow: hidden;
     z-index: 10;
+    background-color: var(--navbar-primary);
+    transition: width 0.5s ease, color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .navbar-list {
@@ -65,7 +70,9 @@ body::-webkit-scrollbar-thumb {
 
 .list-item {
     width: 100%;
-    transition: background-color 0.5s ease-in-out;
+    transition: filter 0.5s ease-in-out;
+    background-color: var(--navbar-primary);
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .list-item:last-child {
@@ -73,21 +80,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .item-link {
+    transition: width 0.5s ease, color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    cursor: pointer;
     display: flex;
     align-items: center;
     height: 5rem;
     text-decoration: none;
-    color: #c0c0c0;
+    color: var(--navbar-text);
     fill: var(--navbar-secondary);
-    transition: filter 0.5s ease;
 }
 
 .list-item:hover {
-    background-color: #0b284e;
-}
-
-.list-item:hover a {
-    filter: brightness(150%);
+    filter: brightness(130%);
 }
 
 @media (min-width:600px) {
@@ -282,7 +286,7 @@ body::-webkit-scrollbar-thumb {
 
 .project {
     padding: 10px;
-    background-color: #00000033;
+    background-color: #00000023;
     border-radius: 10px;
 }
 
@@ -299,7 +303,7 @@ body::-webkit-scrollbar-thumb {
     padding: 2px 5px;
     border-radius: 3px;
     border: none;
-    color: #3f3f3f;
+    color: #303030;
     font: inherit;
     transition: filter 0.3s ease-in-out;
 }
@@ -318,6 +322,58 @@ body::-webkit-scrollbar-thumb {
 
 .page-button-link:hover, .github-button-link:hover {
     filter: brightness(110%);
+}
+
+/* contact */
+
+.contact {
+    height: 100vh;
+    background-image: url('./img/contact-background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: bottom right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #c9c9c9;
+    font-size: 1.5rem;
+}
+
+.contact-icon-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-icon-grid svg {
+    width: 4rem;
+    transition: filter 0.3s ease-in-out;
+    margin: 10px;
+}
+
+.contact-icon-grid svg:hover {
+    filter: brightness(120%);
+    cursor: pointer;
+}
+
+.mail-icon {
+    fill: #D44638;
+}
+
+.facebook-icon {
+    fill: #335db8;
+}
+
+.linkedin-icon {
+    fill: #0e76a8;
+}
+
+.github-icon {
+    fill: #6cc644;
 }
 
 @media (max-width:600px) {
@@ -341,6 +397,12 @@ body::-webkit-scrollbar-thumb {
     .project {
         font-size: 75%;
     }
+    .contact {
+        font-size: 1rem;
+    }
+    .contact-icon-grid svg {
+        width: 3rem;
+    }
 }
 
 @media (min-width:600px) {
@@ -361,21 +423,21 @@ body::-webkit-scrollbar-thumb {
 /* button to top href */
 
 .to-top-button {
-    background-color: #494625;
+    background-color: var(--navbar-secondary);
     position: fixed;
     bottom: -50px;
     right: 30px;
-    transition: bottom 0.5s;
+    transition: bottom 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .to-top-button svg {
     margin: -10px;
-    fill: #978b19;
+    fill: var(--navbar-primary);
     width: 3rem;
     height: 3rem;
-    transition: fill 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out, fill 0.5s ease-in-out;
 }
 
 .to-top-button svg:hover {
-    fill: #aa9c1d;
+    filter: brightness(120%);
 }
