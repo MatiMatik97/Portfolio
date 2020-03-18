@@ -110,14 +110,24 @@
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dolorem natus tempora. Cumque
                             iure alias similique ea. Eos, dicta molestiae.</p>
                         <button class="page-button-link">Github</button>
-                        <button class="github-button-link">Podgląd</button>
+                        <button class="github-button-link" onclick="projectDisplay(1, 'open')">Podgląd</button>
+                        <div class="project-display" id="project-display1">
+                            <img class="image-display" src="./img/tablet.png" alt="tablet">
+                            <div class="caption-display">Obrazek pierwszy</div>
+                            <div class="close-display" onclick="projectDisplay(1, 'close')">X</div>
+                        </div>
                     </div>
                     <div class="project">
                         <h3>Projekt 2</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum impedit in officiis libero
                             reprehenderit excepturi.</p>
                         <button class="page-button-link">Github</button>
-                        <button class="github-button-link">Podgląd</button>
+                        <button class="github-button-link" onclick="projectDisplay(2, 'open')">Podgląd</button>
+                        <div class="project-display" id="project-display2">
+                            <img class="image-display" src="./img/description-background.jpg" alt="favicon">
+                            <div class="caption-display">Obrazek drugi</div>
+                            <div class="close-display" onclick="projectDisplay(2, 'close')">X</div>
+                        </div>
                     </div>
                 </div>
             </div>

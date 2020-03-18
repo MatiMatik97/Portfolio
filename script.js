@@ -1,3 +1,4 @@
+// to top button
 const checkOffset = () => {
     const yOff = window.pageYOffset;
     const el = document.querySelector('.to-top-button');
@@ -6,6 +7,7 @@ const checkOffset = () => {
 document.onscroll = () => checkOffset();
 checkOffset();
 
+// navbar color toggler
 const colors = [
     {
         primary: '#071e3d',
@@ -38,3 +40,27 @@ const changeNavbarColor = () => {
     root.style.setProperty('--navbar-secondary', color.secondary);
     root.style.setProperty('--navbar-text', color.text);
 }
+
+//project display toggler
+const projectDisplay = (index, action) => {
+    const projectElement = document.querySelector(`#project-display${index}`)
+    const bodyElement = document.body
+
+    if (action === 'open') {
+        projectElement.style.display = 'flex'
+        bodyElement.style.overflow = 'hidden'
+    } else if (action === 'close') {
+        projectElement.style.display = 'none'
+        bodyElement.style.overflow = 'visible'
+    }
+}
+
+document.addEventListener("keydown", e => {
+    if (e.keyCode === 27) {//pressed escape button
+        const projectElements = [...document.querySelectorAll('.project-display')]
+        projectElements.forEach(el => el.style.display = 'none')
+
+        const bodyElement = document.body
+        bodyElement.style.overflow = 'visible'
+    }
+});
