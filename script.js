@@ -55,7 +55,7 @@ const projectDisplay = (index, action) => {
     }
 }
 
-document.addEventListener("keydown", e => {
+document.addEventListener('keydown', e => {
     if (e.keyCode === 27) {//pressed escape button
         const projectElements = [...document.querySelectorAll('.project-display')]
         projectElements.forEach(el => el.style.display = 'none')

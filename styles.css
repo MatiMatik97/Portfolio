@@ -249,7 +249,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .description h3 {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .description ul {
@@ -500,6 +500,14 @@ body::-webkit-scrollbar-thumb {
         padding-top: 0;
         margin-top: 0;
         font-size: 1.3rem;
+    }
+    .about-me {
+        background: -moz-linear-gradient(left, #ffffff00 0%, #00000026 100%);
+        background: -webkit-linear-gradient(left, #ffffff00 0%, #00000026 100%);
+        background: linear-gradient(to right, #ffffff00 0%, #00000026 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00000026', GradientType=1);
+        padding: 10px 20px 10px 0px;
+        border-radius: 10px;
     }
     .description-text {
         margin-top: 2rem;
